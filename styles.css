@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #000; /* Задний фон черный */
+  color: #fff; /* Белый текст для контраста */
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  width: 200px;
+  padding: 20px;
+  background-color: #333; /* Темный фон карточек */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #fff; /* Белый цвет заголовка */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #555; /* Светлее при наведении */
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.info {
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #fff; /* Белый текст для информации */
+}
+
+.card:hover .info {
+  opacity: 1;
+}
